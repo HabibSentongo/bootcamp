@@ -19,7 +19,7 @@ const isSignupFailed = error => ({
   payload: error.response.data.error
 });
 
-const registerActions = (userSignupData,) => dispatch => {
+const registerActions = (userSignupData,) => dispatch => {console.log('=====',userSignupData)
   dispatch(isSigningUp());
   return axios.post('https://my-epic-mail.herokuapp.com/api/v2/auth/signup', userSignupData)
   .then((resp) => {
