@@ -12,10 +12,10 @@ class Register extends Component {
 
     this.state = {
       email: '',
-      firstName: '',
-      lastName: '',
+      first_name: '',
+      last_name: '',
       password: '',
-      phoneNumber: '1204356574',
+      phone_number: '1204356574',
     };
   }
   onChangeHandler = (e) => {
@@ -27,15 +27,15 @@ class Register extends Component {
   onSubmitHandler = (e) => {
     e.preventDefault();
 
-    const { email, password, firstName, lastName, phoneNumber } = this.state;
+    const { email, password, first_name, last_name, phone_number } = this.state;
     const { signingUp } = this.props;
 
     // if (email && password) {
-    signingUp(email, password, firstName, lastName, phoneNumber);
+    signingUp(email, password, first_name, last_name, phone_number);
     // }
   }
   render() {
-    const { email, password, firstName, lastName} = this.state;
+    const { email, password, first_name, last_name} = this.state;
     const { errorMessage, isProcessing, userMsg } = this.props;
     return (
       <div className='signupform'>
@@ -44,9 +44,9 @@ class Register extends Component {
           <input
             className="signup-firstname"
             id="signup-firstname"
-            name="firstName"
+            name="first_name"
             type="text"
-            value={firstName}
+            value={first_name}
             onChange={this.onChangeHandler}
             placeholder="First name"
             required
@@ -54,9 +54,9 @@ class Register extends Component {
           <input
             className="signup-lastname"
             id="signup-lastname"
-            name="lastName"
+            name="last_name"
             type="text"
-            value={lastName}
+            value={last_name}
             onChange={this.onChangeHandler}
             placeholder="Last name"
             required
@@ -104,8 +104,8 @@ const mapStateToProps = state => {
   };
 };
 const mapDispatchToProps = dispatch => ({
-  signingUp: (email, password, firstName, lastName, phoneNumber) => {
-    signupActions({ email, password, firstName, lastName, phoneNumber })(dispatch);
+  signingUp: (email, password, first_name, last_name, phone_number) => {
+    signupActions({ email, password, first_name, last_name, phone_number })(dispatch);
   }
 });
 export default connect(
