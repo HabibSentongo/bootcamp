@@ -6,7 +6,8 @@ import thunk from 'redux-thunk';
 // import ViewArticlereducer from '../ViewArticle/redux/reducers/ViewArticlereducer';
 // import signUpReducer from '../auth/signup/redux/reducer/signUpReducer';
 // import allArticleReducer from '../Articles/redux/reducers/allArticlesReducer';
-// import loginReducer from '../auth/Login/redux/reducers/loginReducer';
+import loginReducer from '../redux/Reducers/loginReducers';
+import registerReducer from '../redux/Reducers/registerReducer';
 // import resetPasswordReducer from '../auth/passwordreset/redux/reducers/postReducer';
 // import SearchArticleReducer from '../Articles/redux/reducers/SearchArticleReducer';
 // import CreateArticleReducer from '../Articles/redux/reducers/CreateArticleReducer';
@@ -15,7 +16,8 @@ import thunk from 'redux-thunk';
 const reducers = combineReducers({
   // latest_articles: LatestArticleReducer,
   // createArticle: CreateArticleReducer,
-  // login: loginReducer,
+  loginReducer,
+  registerReducer,
   // signUpUser: signUpReducer,
   // allArticleReducer,
   // searchedArticles: SearchArticleReducer,

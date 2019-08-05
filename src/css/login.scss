@@ -1,0 +1,68 @@
+.loginform {
+    background-color: rgb(233, 176, 245);
+    margin: auto;
+    width: 50%;
+    height: 70vh;
+    margin-top: 20vh;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    border: 15px 23px yellow solid;
+    display: block;
+    overflow: auto;
+  
+    .login-wording {
+      font-family: sans-serif;
+      font-size: 3.8rem;
+      margin-top: 3vh;
+      margin-bottom: 55px;
+    }
+  
+    input,
+    span {
+      display: block;
+      margin: auto;
+      margin-bottom: 45px;
+      width: 50%;
+      font-size: 1.5rem;
+      border-radius: 8px;
+      padding-left: 14px;
+  
+      &:hover {
+        width: 55%;
+      }
+    }
+  
+    button {
+      color: white;
+      background-color: gray;
+      width: 20%;
+      font-size: 1.8rem;
+      border-radius: 8px;
+      font-weight: bold;
+  
+      &:hover {
+        color: black;
+        width: 25%;
+      }
+    }
+  
+    .login-signup-link {
+      font-size: 1.3rem;
+      padding-top: 25px;
+  
+      Link, a {
+        color: rgb(95, 69, 243);
+        font-size: 1.6rem;
+        padding-left: 19px;
+        text-decoration: none;
+        background-color: none;
+  
+        &:hover {
+          color: rgb(101, 64, 238);
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
